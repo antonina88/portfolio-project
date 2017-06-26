@@ -62,9 +62,13 @@ nav {
         height: 100%; }
         nav ul li a:hover {
           color: #fb6470; }
+        @media screen and (max-width: 1200px) {
+          nav ul li a {
+            color: #353541; } }
   nav .hide-menu {
     display: none;
-    z-index: 10; }
+    z-index: 10;
+    color: #353541; }
     nav .hide-menu:hover {
       cursor: pointer; }
   @media screen and (max-width: 1200px) {

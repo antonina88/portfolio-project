@@ -11,9 +11,7 @@ linkAbout.addEventListener("click", function(event) {
 	let eventHref  = this.getAttribute('href');
 	let id = document.querySelector(eventHref);
 	var top = id.offsetTop;
-	//console.log(top);
-	//window.scrollBy(0, top);
-    document.body.animate({scrollTop: top}, 1500);
+   // ${body}.animate({scrollTop: top}, 1500);
 });
 
 const btnMenu = document.querySelector(".menu");
@@ -26,6 +24,6 @@ btnMenu.addEventListener("click", function(ev) {
 });
 
 hideMenu.addEventListener("click", function(ev) {
-	btnMenu.style = "display: block";
+	btnMenu.style = "display: inline-block";
 	navMenu.style = "display: none";
 });

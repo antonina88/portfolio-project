@@ -1,0 +1,70 @@
+$dark-bg: #353541;
+$text-color: #fff;
+$text-grey: #636363;
+$border-color: #fb6470;
+$text-padding: 10px;
+$section-padding: 75px;
+$basic-font: 16px;
+$h2-color: #3e3e3e;
+$bg-color: #1d1d24;
+
+@mixin colored-button($color: $text-color, $bg: $border-color, $border-radius: 5px) {
+  border-radius: $border-radius;
+  border: none;
+  background: $bg;
+  color: $color; 
+}
+@mixin basic-section() {
+	 padding: {
+	 	top: $section-padding;
+	 	bottom: $section-padding;
+	}
+	h2 {
+		color: $h2-color;
+		position: relative;
+		padding-bottom: 20px;
+		text-transform: capitalize;
+		font-size: 30px;
+		&::after {
+			content: "";
+			width: 90px;
+			border: 1px solid $border-color;
+			position: absolute;
+			top: 40px;
+			left: 0;
+		}
+	} 
+}
+@mixin progress-bar($circle-left, $before-width, $after-width, $before-circle-left, $after-circle-left) {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: $border-color;
+	position: relative;
+	left: $circle-left;
+	padding: 0;
+	&::before{
+		content: "";
+		width: $before-width;
+		height: 3px;
+		border: 1px solid $border-color;
+		background: $border-color;
+		margin-left: 4px;
+		margin-right: 4px;
+		position: absolute;
+		top: 5px;
+		left: $before-circle-left;	
+	}
+	&::after{
+		content: "";
+		width: $after-width;
+		height: 3px; 
+		border: 1px solid #707070;
+		background: #707070;
+		margin-left: 4px;
+		margin-right: 4px;
+		position: absolute;
+		top: 5px;
+		left: $after-circle-left;
+	}
+}
